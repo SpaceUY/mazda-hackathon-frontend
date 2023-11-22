@@ -17,6 +17,7 @@
     "@walletconnect/sign-client": "^2.10.4",
     "@web3auth/torus-wallet-connector-plugin": "^7.1.1",
     "axios": "^1.6.0",
+    "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.3",
