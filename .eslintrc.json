@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["src/"]
+      }
+    }
+  },
+  "extends": [
+    "react-app",
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["prefer-arrow-functions"],
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "camelcase": "error",
+    "import/named": 0,
+    "import/no-named-as-default-member": 0,
+    "react/default-props-match-prop-types": "error",
+    "react/jsx-pascal-case": "error",
+    "react/no-multi-comp": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-arrow-functions/prefer-arrow-functions": [
+      "error",
+      {
+        "classPropertiesAllowed": false,
+        "disallowPrototype": false,
+        "returnStyle": "unchanged",
+        "singleReturnOnly": false
+      }
+    ],
+    "prefer-const": "error",
+    "import/no-unresolved": 0,
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "react/react-in-jsx-scope": "off"
+  }
+}
