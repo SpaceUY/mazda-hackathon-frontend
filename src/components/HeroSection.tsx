@@ -71,9 +71,9 @@ export const HeroSection: React.FC = () => {
       </Box>
       <Box
         sx={{
-          marginTop: '10rem',
+          marginTop: '8rem',
           width: '100%',
-          minHeight: '50rem',
+          minHeight: '42rem',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center'
@@ -81,7 +81,7 @@ export const HeroSection: React.FC = () => {
         <Box
           sx={{
             minWidth: '58rem',
-            maxHeight: '50rem'
+            maxHeight: '42rem'
           }}>
           <Box
             sx={{
