@@ -11,12 +11,18 @@ import NavLink, { NavLinkItem } from 'design/NavLink';
 const navigation: NavLinkItem[] = [{ path: '/my-assets', label: 'MY ASSETS' }];
 
 const FullScreen = ({
-  showNavigation = true
+  showNavigation = true,
+  display = 'flex'
 }: {
   showNavigation?: boolean;
+  display?: string;
 }) => {
   const Web3auth = useWeb3auth();
   const navigate = useNavigate();
+
+  const onCarNFTClick = () => {
+    navigate('/nft-view/0x851359e4ee55918ef69A87078C9f1Bd8d85421d2/0');
+  };
 
   return (
     <Box sx={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
@@ -69,6 +75,7 @@ const FullScreen = ({
               </Button>
               <Button
                 color="inherit"
+                onClick={onCarNFTClick}
                 sx={{
                   fontFamily: 'Montserrat',
                   fontSize: '1.125rem',
@@ -80,7 +87,7 @@ const FullScreen = ({
           </Box>
         </Toolbar>
       </AppBar>
-      <Box pt="6.375rem" minHeight="100vh" display="flex" gap={2}>
+      <Box pt="6.375rem" minHeight="100vh" display={display} gap={2}>
         {showNavigation && (
           <Card
             component="aside"

@@ -7,6 +7,11 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 
 export const Footer: React.FC = () => {
   const navigate = useNavigate();
+
+  const onCarNFTClick = () => {
+    navigate('/nft-view/0x851359e4ee55918ef69A87078C9f1Bd8d85421d2/0');
+  };
+
   return (
     <Box
       sx={{
@@ -50,6 +55,7 @@ export const Footer: React.FC = () => {
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Button
               color="inherit"
+              onClick={onCarNFTClick}
               sx={{
                 fontFamily: 'Roboto',
                 fontSize: '0.875rem',
