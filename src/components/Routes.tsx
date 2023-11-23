@@ -6,9 +6,11 @@ import FullScreen from 'design/Layouts/FullScreen';
 
 const Routes = () => (
   <RoutesFromRouter>
-    <Route element={<FullScreen />}>
+    <Route element={<FullScreen showNavigation={false} />}>
       <Route path={'/'} element={<Home />} />
-      <Route path={'/view-nft/:address/:id'} element={<NFTView />} />
+    </Route>
+    <Route element={<FullScreen showNavigation={false} display="block" />}>
+      <Route path={'/nft-view/:address/:id'} element={<NFTView />} />
       <Route path="*" element={<>Not found</>} />
     </Route>
   </RoutesFromRouter>

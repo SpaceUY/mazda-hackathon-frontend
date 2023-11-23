@@ -1,77 +1,60 @@
-import useWeb3auth from 'hooks/useWeb3auth';
+import mazdaKey from 'assets/images/IMG-MAZDA-LOOK&FEEL.png';
 
-import { Box, Button, Typography } from '@mui/material';
-import { Container } from '@mui/system';
+import { Box, Container, Typography } from '@mui/material';
+
+import { Footer } from 'components/Footer';
+import { HeroSection } from 'components/HeroSection';
+import { ProjectSection } from 'components/ProjectSection';
 
 const Home = () => {
-  const Web3auth = useWeb3auth();
-
   return (
-    <Container>
-      {Web3auth && Web3auth.loggedIn ? (
-        <>
-          <Typography mt={2} component="h1" variant="h5">
-            Available actions
+    <Container
+      sx={{
+        minHeight: 'calc(100vh - 6.375rem)',
+        minWidth: '100%',
+        padding: '0 !important',
+        margin: '0'
+      }}>
+      <HeroSection />
+      <ProjectSection />
+      <Box
+        sx={{
+          backgroundImage: `url(${mazdaKey})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '30rem',
+          // minWidth: '30rem',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column'
+        }}>
+        <Typography
+          sx={{
+            color: '#FFF',
+            textAlign: 'center',
+            fontFamily: 'Montserrat',
+            fontStyle: 'normal',
+            fontWeight: 300,
+            fontSize: '1.875rem',
+            letterSpacing: '0.2rem',
+            flexShrink: 0
+          }}>
+          Automotive Engagement
+          <Typography
+            sx={{
+              color: '#FFF',
+              fontFamily: 'Montserrat',
+              fontSize: '1.875rem',
+              fontWeight: 700,
+              letterSpacing: '0.2rem'
+            }}>
+            UNMATCHED IDEAD
           </Typography>
-          <Box mt={1} display="flex" gap={1}>
-            <>
-              <Button
-                variant="contained"
-                onClick={async () => {
-                  const me = await Web3auth?.getAccounts();
-                  Web3auth?.buyCoins(
-                    me ? me[0] : '0xbDdBC20FE4a8E8A62306B13C2cAA2bb1FaCA87fd'
-                  );
-                }}>
-                Buy coins
-              </Button>
-              <Button
-                variant="contained"
-                onClick={async () =>
-                  console.log(await Web3auth?.getPrivateKey())
-                }>
-                Get Private key
-              </Button>
-              <Button
-                variant="contained"
-                onClick={async () => console.log(await Web3auth?.getIdToken())}>
-                Get token id
-              </Button>
-              <Button
-                variant="contained"
-                onClick={async () =>
-                  console.log(await Web3auth?.getUserInfo())
-                }>
-                Get user info
-              </Button>
-              <Button
-                variant="contained"
-                onClick={async () => console.log(await Web3auth?.getBalance())}>
-                Get Balance
-              </Button>
-              <Button
-                variant="contained"
-                onClick={async () =>
-                  console.log(await Web3auth?.getAccounts())
-                }>
-                Get accounts
-              </Button>
-              <Button
-                variant="contained"
-                onClick={async () => {
-                  const me = await Web3auth?.getAccounts();
-                  console.log(await Web3auth?.sendTransaction(me ? me[0] : ''));
-                }}>
-                Send Transaction
-              </Button>
-            </>
-          </Box>
-        </>
-      ) : (
-        <Typography mt={2} component="h1" variant="h5">
-          Connect your wallet
         </Typography>
-      )}
+      </Box>
+      <Footer />
     </Container>
   );
 };
