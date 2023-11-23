@@ -23,7 +23,7 @@ export const HeroSection: React.FC = () => {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             minHeight: '55rem',
-            minWidth: '70rem',
+            // minWidth: '70rem',
             borderRadius: '6rem 6rem 0 0',
             display: 'flex',
             justifyContent: 'center',
@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
           </Typography>
           <Box
             sx={{
-              minWidth: '11rem',
+              // minWidth: '11rem',
               minHeight: '3rem',
               marginTop: '3rem'
             }}>
@@ -80,13 +80,14 @@ export const HeroSection: React.FC = () => {
         }}>
         <Box
           sx={{
-            minWidth: '58rem',
+            // minWidth: '58rem',
             maxHeight: '42rem'
           }}>
           <Box
             sx={{
               position: 'relative',
-              width: '35rem',
+              width: { xs: '90%', md: '35rem' },
+              mx: 'auto',
               backgroundColor: '#000000',
               opacity: '83%',
               height: '23rem',
@@ -95,7 +96,8 @@ export const HeroSection: React.FC = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              zIndex: 1
+              zIndex: 10,
+              backdropFilter: 'blur(50px)'
             }}>
             <Box sx={{ margin: '2rem' }}>
               <Typography
@@ -141,7 +143,7 @@ export const HeroSection: React.FC = () => {
             }}>
             <Box
               sx={{
-                width: '35rem',
+                width: { xs: '25rem', xl: '35rem' },
                 height: '23rem',
                 backgroundImage: `url(${VolanteImage})`,
                 backgroundSize: 'cover',
@@ -152,16 +154,16 @@ export const HeroSection: React.FC = () => {
                 alignItems: 'center',
                 position: 'absolute',
                 top: '-15rem',
-                left: '49rem',
+                left: { xs: '15rem', xl: '49rem' },
                 transform: 'translateX(-50%)',
                 zIndex: 0
               }}></Box>
             <Box
               sx={{
                 position: 'relative',
-                left: '17rem',
+                left: { xs: '-10rem', xl: '23rem' },
                 top: '-27.75rem',
-                width: '44rem',
+                width: { xs: '30rem', xl: '44rem' },
                 height: '44rem',
                 backgroundImage: `url(${HubVolante})`,
                 backgroundSize: 'cover',

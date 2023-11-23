@@ -24,7 +24,7 @@ const Home = () => {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           minHeight: '30rem',
-          minWidth: '30rem',
+          // minWidth: '30rem',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',

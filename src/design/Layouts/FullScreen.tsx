@@ -89,7 +89,7 @@ const FullScreen = ({
               padding: '2rem 0',
               borderWidth: 0,
               height: 'fit-content',
-              minWidth: '12.875rem',
+              // minWidth: '12.875rem',
               borderRadius: '0 1.5rem 1.5rem 0'
             }}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
