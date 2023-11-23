@@ -1,7 +1,6 @@
 import { ReactComponent as GlareBackground } from 'assets/images/Glare.svg';
 import logo from 'assets/images/logo-space.png';
 import useWeb3auth from 'hooks/useWeb3auth';
-import { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 import { AppBar, Box, Button, Toolbar } from '@mui/material';
@@ -11,19 +10,6 @@ import NavLink, { NavLinkItem } from 'design/NavLink';
 
 const navigation: NavLinkItem[] = [{ path: '/my-assets', label: 'MY ASSETS' }];
 
-const variants = {
-  open: {
-    opacity: 1,
-    x: 0,
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-  },
-  closed: {
-    opacity: 0,
-    x: '-100%',
-    transition: { staggerChildren: 0.05, staggerDirection: -1 }
-  }
-};
-
 const FullScreen = ({
   showNavigation = true
 }: {
@@ -31,8 +17,6 @@ const FullScreen = ({
 }) => {
   const Web3auth = useWeb3auth();
   const navigate = useNavigate();
-
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Box sx={{ width: '100vw', height: '100vh', overflow: 'auto' }}>
