@@ -85,17 +85,16 @@ export default class EthereumRpc {
     }
   }
 
-  async readContract(contractAddress: string, contractABI: any[]) {
+  async readContract(contractAddress: string, abi: object[], params: any) {
     try {
       const web3 = new _web3(this.provider as any);
 
       const contract = new web3.eth.Contract(
-        JSON.parse(JSON.stringify(contractABI)),
+        JSON.parse(JSON.stringify(abi)),
         contractAddress
       );
 
-      // Read message from smart contract
-      const message = await contract.methods.message().call();
+      const message = await contract.methods.tokenURI(params).call();
       return message;
     } catch (error) {
       return error as string;

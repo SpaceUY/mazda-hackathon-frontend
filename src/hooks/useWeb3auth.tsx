@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { CHAIN_NAMESPACES, IProvider } from '@web3auth/base';
-import { MetamaskAdapter } from '@web3auth/metamask-adapter';
+// import { MetamaskAdapter } from '@web3auth/metamask-adapter';
 import { Web3Auth } from '@web3auth/modal';
 import {
   OPENLOGIN_NETWORK,
@@ -12,7 +12,6 @@ import {
   WalletConnectV2Adapter,
   getWalletConnectV2Settings
 } from '@web3auth/wallet-connect-v2-adapter';
-import someAbi from 'contracts/abi';
 import {
   ReactNode,
   createContext,
@@ -40,7 +39,11 @@ type Web3auth = {
   getPrivateKey: () => Promise<string | undefined>;
   sendTransaction: (destination: string) => Promise<any>;
   signMessage: () => Promise<string | undefined>;
-  readContract: () => Promise<string | void | []>;
+  readContract: (
+    contractAddress: string,
+    abi: object[],
+    params: any
+  ) => Promise<string | void | []>;
   getAccounts: () => Promise<string[] | undefined>;
 };
 
@@ -64,10 +67,12 @@ export const Web3authContextProvider = ({
           clientId,
           chainConfig: {
             chainNamespace: CHAIN_NAMESPACES.EIP155,
-            chainId: '0x5',
-            rpcTarget: 'https://rpc.ankr.com/eth_goerli' // This is the public RPC we have added, please pass on your own endpoint while creating an app
+            chainId: '0x81',
+            rpcTarget: 'https://evm.shibuya.astar.network', // This is the public RPC we have added, please pass on your own endpoint while creating an app
+            blockExplorer: 'https://shibuya.subscan.io/',
+            displayName: 'Shibuya'
           },
-          web3AuthNetwork: OPENLOGIN_NETWORK.SAPPHIRE_DEVNET
+          web3AuthNetwork: OPENLOGIN_NETWORK.SAPPHIRE_MAINNET
         });
 
         const openloginAdapter = new OpenloginAdapter({
@@ -143,30 +148,30 @@ export const Web3authContextProvider = ({
 
         web3auth.configureAdapter(walletConnectV2Adapter);
 
-        // adding metamask adapter
-        const metamaskAdapter = new MetamaskAdapter({
-          clientId,
-          sessionTime: 3600, // 1 hour in seconds
-          web3AuthNetwork: 'cyan',
-          chainConfig: {
-            chainNamespace: CHAIN_NAMESPACES.EIP155,
-            chainId: '0x1',
-            rpcTarget: 'https://rpc.ankr.com/eth' // This is the public RPC we have added, please pass on your own endpoint while creating an app
-          }
-        });
-        // we can change the above settings using this function
-        metamaskAdapter.setAdapterSettings({
-          sessionTime: 86400, // 1 day in seconds
-          chainConfig: {
-            chainNamespace: CHAIN_NAMESPACES.EIP155,
-            chainId: '0x1',
-            rpcTarget: 'https://rpc.ankr.com/eth' // This is the public RPC we have added, please pass on your own endpoint while creating an app
-          },
-          web3AuthNetwork: 'cyan'
-        });
+        // // adding metamask adapter
+        // const metamaskAdapter = new MetamaskAdapter({
+        //   clientId,
+        //   sessionTime: 3600, // 1 hour in seconds
+        //   web3AuthNetwork: 'cyan',
+        //   chainConfig: {
+        //     chainNamespace: CHAIN_NAMESPACES.EIP155,
+        //     chainId: '0x1',
+        //     rpcTarget: 'https://rpc.ankr.com/eth' // This is the public RPC we have added, please pass on your own endpoint while creating an app
+        //   }
+        // });
+        // // we can change the above settings using this function
+        // metamaskAdapter.setAdapterSettings({
+        //   sessionTime: 86400, // 1 day in seconds
+        //   chainConfig: {
+        //     chainNamespace: CHAIN_NAMESPACES.EIP155,
+        //     chainId: '0x1',
+        //     rpcTarget: 'https://rpc.ankr.com/eth' // This is the public RPC we have added, please pass on your own endpoint while creating an app
+        //   },
+        //   web3AuthNetwork: 'cyan'
+        // });
 
-        // it will add/update  the metamask adapter in to web3auth class
-        web3auth.configureAdapter(metamaskAdapter);
+        // // it will add/update  the metamask adapter in to web3auth class
+        // web3auth.configureAdapter(metamaskAdapter);
 
         const torusWalletAdapter = new TorusWalletAdapter({
           clientId
@@ -264,10 +269,14 @@ export const Web3authContextProvider = ({
     }
   };
 
-  const readContract = async () => {
+  const readContract = async (
+    contractAddress: string,
+    abi: object[],
+    params: any
+  ) => {
     if (provider) {
       const rpc = new RPC(provider);
-      const message = await rpc.readContract('0x...', someAbi);
+      const message = await rpc.readContract(contractAddress, abi, params);
       return message;
     }
   };
