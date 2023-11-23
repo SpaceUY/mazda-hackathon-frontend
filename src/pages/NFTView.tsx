@@ -265,7 +265,7 @@ const NFTView = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height="100vh"
+      height="92vh"
       width="100vw">
       <CircularProgress />
     </Box>
