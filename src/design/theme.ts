@@ -1,9 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 
 const primary = {
-  dark: '#433273',
-  main: '#5F47A4',
-  light: '#7A5FC8'
+  dark: '#000000',
+  main: '#CC6600',
+  light: '#3A3A3A'
 };
 
 export const Colors = {
@@ -22,13 +22,16 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         colorPrimary: {
-          backgroundColor: primary.dark
+          backgroundColor: 'transparent',
+          backgroundImage: 'none',
+          boxShadow: 'none'
         }
       }
     }
   },
   typography: {
     fontFamily: [
+      '"Montserrat"',
       '"Inter"',
       '-apple-system',
       'BlinkMacSystemFont',
@@ -41,7 +44,8 @@ const theme = createTheme({
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"'
-    ].join(',')
+    ].join(','),
+    fontWeightLight: 100
   }
 });
 
