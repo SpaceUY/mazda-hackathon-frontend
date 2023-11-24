@@ -2,9 +2,9 @@ import mazdaKey from 'assets/images/IMG-MAZDA-LOOK&FEEL.png';
 
 import { Box, Container, Typography } from '@mui/material';
 
-import { Footer } from 'components/Footer';
-import { HeroSection } from 'components/HeroSection';
-import { ProjectSection } from 'components/ProjectSection';
+import { Footer } from 'components/Landing/Footer';
+import { HeroSection } from 'components/Landing/HeroSection';
+import { ProjectSection } from 'components/Landing/ProjectSection';
 
 const Home = () => {
   return (
@@ -54,6 +54,7 @@ const Home = () => {
           </Typography>
         </Typography>
       </Box>
+
       <Footer />
     </Container>
   );
