@@ -123,7 +123,7 @@ export const HeroSection: React.FC = () => {
                   letterSpacing: '0.225rem',
                   flexShrink: 0
                 }}>
-                Designed to synergyze with....(pagina 2)
+                DESIGNED TO SYNERGYZE WITH THE MAZDA DRIVING PLEASURE
               </Typography>
               <Typography
                 sx={{
@@ -131,13 +131,13 @@ export const HeroSection: React.FC = () => {
                   color: '#F0F0F0F0',
                   textAlign: 'center',
                   fontFamily: 'Montserrat',
-                  fontStyle: 'normal',
+                  fontStyle: 'italic',
                   fontWeight: 400,
                   fontSize: { xs: '0.5rem', sm: '1rem', md: '1.15rem' },
                   letterSpacing: '0.225rem',
                   lineHeight: { xs: '1.5rem', smd: '2rem', md: '2.5rem' }
                 }}>
-                Our platform enhances every aspect
+                MUNDANE DRIVING INTO A REWARDING JOURNEY
               </Typography>
             </Box>
           </Box>

@@ -120,7 +120,7 @@ export const Footer: React.FC = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={{ maxWidth: '20%', margin: 'auto', marginTop: '1.5rem' }}>
+      <Box sx={{ maxWidth: '30%', margin: 'auto', marginTop: '1.5rem' }}>
         <Grid
           container
           spacing={1}
@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
             margin: 'auto',
             marginBottom: '1.5rem'
           }}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={12}>
             <Typography
               sx={{
                 color: '#F0F0F0F0',
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
               © 2023
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={12}>
             <Typography
               sx={{
                 color: '#F0F0F0F0',
@@ -152,11 +152,40 @@ export const Footer: React.FC = () => {
                 fontSize: '0.875rem',
                 fontWeight: '400',
                 lineHeight: '1.25rem',
-                textAlign: 'center'
+                textAlign: 'center',
+                '& a': {
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    textDecoration: 'underline'
+                  }
+                }
               }}>
-              Project developed for the Web3 Global...
-              (https://key3.eventos.tokyo/web/portal/744/event/7845), not for
-              commercial use
+              <a href="https://key3.eventos.tokyo/web/portal/744/event/7845">
+                About
+              </a>
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12}>
+            <Typography
+              sx={{
+                color: '#F0F0F0F0',
+                fontFamily: 'Roboto',
+                fontSize: '0.875rem',
+                fontWeight: '400',
+                lineHeight: '1.25rem',
+                textAlign: 'center',
+                '& a': {
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    textDecoration: 'underline'
+                  }
+                }
+              }}>
+              <a href="https://key3.eventos.tokyo/web/portal/744/event/7845">
+                Project developed for the Web3 Global, not for commercial use
+              </a>
             </Typography>
           </Grid>
         </Grid>
