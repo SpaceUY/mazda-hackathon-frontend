@@ -5,7 +5,7 @@ import axios from 'axios';
 import nftMazdaABI from 'contracts/abi';
 import useWeb3auth from 'hooks/useWeb3auth';
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import LaunchIcon from '@mui/icons-material/Launch';
 import {
@@ -14,6 +14,7 @@ import {
   Container,
   Grid,
   IconButton,
+  Link,
   Typography
 } from '@mui/material';
 
@@ -56,7 +57,6 @@ export type Service = {
 const NFTView = () => {
   const params = useParams();
   const web3 = useWeb3auth();
-  const navigate = useNavigate();
 
   const [nft, setNft] = useState<NFT | undefined>(undefined);
   const [error, setError] = useState(false);
@@ -106,14 +106,14 @@ const NFTView = () => {
                   fontSize: { xs: '1.75rem', md: '2.125rem' }
                 }}>
                 {"JUAN'S CAR"}{' '}
-                <IconButton
-                  onClick={() =>
-                    navigate(
-                      'https://blockscout.com/shibuya/tx/0x79e98f9c7dccff1b363bb72c4f35879d9c95205ee8ec610a25a66ea5df4ae119'
-                    )
-                  }>
-                  <LaunchIcon />
-                </IconButton>
+                <Link
+                  href="https://blockscout.com/shibuya/tx/0x79e98f9c7dccff1b363bb72c4f35879d9c95205ee8ec610a25a66ea5df4ae119"
+                  rel="noreferrer"
+                  target="_blank">
+                  <IconButton>
+                    <LaunchIcon />
+                  </IconButton>
+                </Link>
               </Typography>
               <Typography
                 sx={{

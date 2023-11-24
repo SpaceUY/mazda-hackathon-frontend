@@ -2,7 +2,7 @@ import logo from 'assets/images/logo-space.png';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Box, Button, Grid, Link, Typography } from '@mui/material';
+import { Box, Grid, Link, Typography } from '@mui/material';
 
 export const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -27,8 +27,11 @@ export const Footer: React.FC = () => {
           justifyContent="center"
           style={{ width: '80%', height: '100%', margin: 'auto' }}>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Button
+            <Link
+              href="https://app.akindo.io/communities/Wj0W1QROqFPKrlKK/products/nPOj4m8Qks3Vlekd"
               color="inherit"
+              rel="noreferrer"
+              target="_blank"
               sx={{
                 fontFamily: 'Roboto',
                 fontSize: '0.875rem',
@@ -36,8 +39,8 @@ export const Footer: React.FC = () => {
                 fontWeight: 700,
                 lineHeight: '1.25rem'
               }}>
-              Project submission (arreglar) 2
-            </Button>
+              Project submission
+            </Link>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
             <Box
