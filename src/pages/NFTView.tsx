@@ -146,7 +146,7 @@ const NFTView = () => {
         </Container>
 
         <Container>
-          <Box m="auto" width="90%" position="relative" mt="15vw">
+          <Box m="auto" width="100%" position="relative" mt="15vw">
             <Box position="absolute" top={0} width="100%">
               <GlassBackground />
             </Box>
@@ -157,12 +157,11 @@ const NFTView = () => {
               sx={{
                 px: { xs: '1rem', md: '8.625rem' },
                 top: {
-                  xxl: '-9vw',
-                  xl: '-11vw',
-                  lg: '-15vw',
-                  md: '-17vw',
-                  sm: '-24vw',
-                  xs: '-25vw'
+                  xl: '-13vw',
+                  lg: '-17vw',
+                  md: '-19vw',
+                  sm: '-26vw',
+                  xs: '-27vw'
                 }
               }}>
               <Box sx={{ m: 'auto', width: '100%' }}>
