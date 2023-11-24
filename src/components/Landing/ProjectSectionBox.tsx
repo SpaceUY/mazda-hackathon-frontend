@@ -6,30 +6,27 @@ export const ProjectSectionBox = () => {
   return (
     <Box
       sx={{
-        marginTop: '2rem',
         background: 'white',
         minHeight: '20rem'
       }}>
       <Box sx={{ maxWidth: '100rem', margin: 'auto' }}>
         <Grid
           container
-          spacing={2}
+          spacing={{ xs: 8, sm: 6, md: 2 }}
           alignItems="center"
-          justifyContent="center"
-          style={{ height: '100%' }}>
+          justifyContent="center">
           <Grid
             item
             xs={12}
             sx={{
               textAlign: 'center',
-              marginTop: '2rem',
-              marginBottom: '4rem'
+              paddingBottom: { xs: '5rem', sm: '2rem', md: '4rem' }
             }}>
             <Typography
               sx={{
                 color: '#000000',
                 maxWidth: '38rem',
-                maxHeight: '2rem',
+                maxHeight: '1rem',
                 fontFamily: 'Montserrat',
                 fontSize: '1.25rem',
                 fontWeight: '500',
@@ -41,7 +38,7 @@ export const ProjectSectionBox = () => {
             </Typography>
           </Grid>
           {/* First Box */}
-          <Grid item xs={12} md={4} sx={{ marginBottom: '-10rem' }}>
+          <Grid item xs={5} sm={5} md={4} sx={{ marginBottom: '-10rem' }}>
             <Box
               sx={{
                 borderRadius: '0.625rem',
@@ -82,7 +79,7 @@ export const ProjectSectionBox = () => {
             </Box>
           </Grid>
           {/* Second Box */}
-          <Grid item xs={12} md={4} sx={{ marginBottom: '-10rem' }}>
+          <Grid item xs={5} sm={5} md={4} sx={{ marginBottom: '-10rem' }}>
             <Box
               sx={{
                 borderRadius: '0.625rem',
@@ -123,7 +120,7 @@ export const ProjectSectionBox = () => {
             </Box>
           </Grid>
           {/* Third Box */}
-          <Grid item xs={12} md={4} sx={{ marginBottom: '-10rem' }}>
+          <Grid item xs={5} sm={5} md={4} sx={{ marginBottom: '-10rem' }}>
             <Box
               sx={{
                 borderRadius: '0.625rem',

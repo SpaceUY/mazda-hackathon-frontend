@@ -1,5 +1,5 @@
 import HeroImage from 'assets/images/HERO-IMG.png';
-import HubVolante from 'assets/images/HUDElement.png';
+import { ReactComponent as HubVolant } from 'assets/images/HUD-ELEMENT-NARANJA-01 1.svg';
 import VolanteImage from 'assets/images/VOLANTE-IMG.png';
 import React from 'react';
 
@@ -23,7 +23,6 @@ export const HeroSection: React.FC = () => {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             minHeight: '55rem',
-            // minWidth: '70rem',
             borderRadius: '6rem 6rem 0 0',
             display: 'flex',
             justifyContent: 'center',
@@ -56,14 +55,27 @@ export const HeroSection: React.FC = () => {
           </Typography>
           <Box
             sx={{
-              // minWidth: '11rem',
+              minWidth: '11rem',
               minHeight: '3rem',
               marginTop: '3rem'
             }}>
             <Button
               fullWidth
               variant="contained"
-              sx={{ backgroundColor: '#FFF', color: '#141414' }}>
+              sx={{
+                backgroundColor: '#FFF',
+                color: '#141414',
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  backgroundColor: '#432101',
+                  color: '#FFF'
+                },
+                '&:active': {
+                  backgroundColor: '#432101',
+                  color: '#FFF',
+                  transform: 'scale(0.98)'
+                }
+              }}>
               JOIN
             </Button>
           </Box>
@@ -71,33 +83,32 @@ export const HeroSection: React.FC = () => {
       </Box>
       <Box
         sx={{
-          marginTop: '8rem',
+          marginTop: '4rem',
+          marginBottom: { xs: '5rem', md: 0 },
           width: '100%',
-          minHeight: '42rem',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center'
+          minHeight: '42rem'
         }}>
         <Box
           sx={{
-            // minWidth: '58rem',
-            maxHeight: '42rem'
+            width: { xs: '90%', sm: '90%', md: '100%', lg: '50%' },
+            maxWidth: { xs: '90%', sm: '90%', md: '70%', lg: '50%' },
+            maxHeight: '12rem',
+            margin: 'auto'
           }}>
           <Box
             sx={{
               position: 'relative',
-              width: { xs: '90%', md: '35rem' },
-              mx: 'auto',
+              width: { xs: '75%', md: '34rem' },
+              maxWidth: '35rem',
               backgroundColor: '#000000',
-              opacity: '83%',
+              opacity: { xs: '93%', md: '83%' },
               height: '23rem',
               borderRadius: '1.25rem',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              zIndex: 10,
-              backdropFilter: 'blur(50px)'
+              zIndex: 1
             }}>
             <Box sx={{ margin: '2rem' }}>
               <Typography
@@ -108,7 +119,7 @@ export const HeroSection: React.FC = () => {
                   fontFamily: 'Montserrat',
                   fontStyle: 'normal',
                   fontWeight: 800,
-                  fontSize: '2rem',
+                  fontSize: { xs: '1rem', sm: '1.5rem', md: '2rem' },
                   letterSpacing: '0.225rem',
                   flexShrink: 0
                 }}>
@@ -122,9 +133,9 @@ export const HeroSection: React.FC = () => {
                   fontFamily: 'Montserrat',
                   fontStyle: 'normal',
                   fontWeight: 400,
-                  fontSize: '1.15rem',
+                  fontSize: { xs: '0.5rem', sm: '1rem', md: '1.15rem' },
                   letterSpacing: '0.225rem',
-                  lineHeight: '2.5rem'
+                  lineHeight: { xs: '1.5rem', smd: '2rem', md: '2.5rem' }
                 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 ultricies lectus eros, convallis scelerisque lacus.
@@ -143,7 +154,8 @@ export const HeroSection: React.FC = () => {
             }}>
             <Box
               sx={{
-                width: { xs: '25rem', xl: '35rem' },
+                width: { xs: '75%', sm: '75%', md: '34rem' },
+                maxWidth: '35rem',
                 height: '23rem',
                 backgroundImage: `url(${VolanteImage})`,
                 backgroundSize: 'cover',
@@ -153,27 +165,20 @@ export const HeroSection: React.FC = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: 'absolute',
-                top: '-15rem',
-                left: { xs: '15rem', xl: '49rem' },
+                top: { xs: '-3rem', md: '-15rem' },
+                left: { xs: '15.1rem', sm: '23rem', md: '43rem' },
                 transform: 'translateX(-50%)',
                 zIndex: 0
-              }}></Box>
-            <Box
-              sx={{
-                position: 'relative',
-                left: { xs: '-10rem', xl: '23rem' },
-                top: '-27.75rem',
-                width: { xs: '30rem', xl: '44rem' },
-                height: '44rem',
-                backgroundImage: `url(${HubVolante})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                borderRadius: '1.25rem',
-
-                zIndex: 1
-              }}
-            />
+              }}>
+              <Box
+                sx={{
+                  display: { xs: 'none', md: 'flex' },
+                  marginTop: '2rem',
+                  marginRight: '6rem'
+                }}>
+                <HubVolant />
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>
