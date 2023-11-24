@@ -74,17 +74,19 @@ const FullScreen = ({
                 }}>
                 {Web3auth && Web3auth.loggedIn ? 'LOG OUT' : 'LOG IN'}
               </Button>
-              <Button
-                color="inherit"
-                onClick={onCarNFTClick}
-                sx={{
-                  fontFamily: 'Montserrat',
-                  fontSize: '1.125rem',
-                  color: '#A3A3A3',
-                  backdropFilter: 'blur(.5rem)'
-                }}>
-                MY CAR
-              </Button>
+              {Web3auth && Web3auth.loggedIn && (
+                <Button
+                  color="inherit"
+                  onClick={onCarNFTClick}
+                  sx={{
+                    fontFamily: 'Montserrat',
+                    fontSize: '1.125rem',
+                    color: '#A3A3A3',
+                    backdropFilter: 'blur(.5rem)'
+                  }}>
+                  MY CAR
+                </Button>
+              )}
             </Box>
           </Box>
         </Toolbar>
