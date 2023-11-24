@@ -56,7 +56,7 @@ const FullScreen = ({
             </Box>
             <Box
               sx={{
-                display: { xs: 'none', md: 'flex' },
+                display: 'flex',
                 gap: 3,
                 marginRight: '2rem'
               }}>
