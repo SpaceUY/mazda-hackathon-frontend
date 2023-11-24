@@ -65,7 +65,8 @@ const FullScreen = ({
                 sx={{
                   fontFamily: 'Montserrat',
                   fontSize: '1.125rem',
-                  color: '#A3A3A3'
+                  color: '#A3A3A3',
+                  backdropFilter: 'blur(.5rem)'
                 }}
                 onClick={async () => {
                   if (Web3auth)
@@ -79,7 +80,8 @@ const FullScreen = ({
                 sx={{
                   fontFamily: 'Montserrat',
                   fontSize: '1.125rem',
-                  color: '#A3A3A3'
+                  color: '#A3A3A3',
+                  backdropFilter: 'blur(.5rem)'
                 }}>
                 CAR NFT
               </Button>
