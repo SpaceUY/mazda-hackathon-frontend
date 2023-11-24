@@ -145,114 +145,126 @@ const NFTView = () => {
           </Grid>
         </Container>
 
-        <Box m="auto" width="90%" position="relative" mt="15vw">
-          <Box position="absolute" top={0} width="100%">
-            <GlassBackground />
-          </Box>
-          <Box
-            position="absolute"
-            top={'-20vw'}
-            width="100%"
-            height="fit-content"
-            sx={{ px: { xs: '1rem', md: '8.625rem' } }}>
-            <Box sx={{ m: 'auto', width: '100%' }}>
-              <img
-                src={`https://ipfs.io/ipfs/${nft.image.slice(7)}`}
-                alt="car"
-                width="100%"
-              />
+        <Container>
+          <Box m="auto" width="90%" position="relative" mt="15vw">
+            <Box position="absolute" top={0} width="100%">
+              <GlassBackground />
             </Box>
             <Box
-              display="flex"
-              flexWrap="wrap"
-              gap="3.5rem"
-              justifyContent="center">
-              <CardItem
-                text={`MODEL: ${
-                  nft.attributes.find((a) => a.trait_type === 'Model')?.value
-                }`}
-              />
-              <CardItem
-                text={`TYPE: ${
-                  nft.attributes.find((a) => a.trait_type === 'Type')?.value
-                }`}
-              />
-              <CardItem
-                text={`COLOR: ${
-                  nft.attributes.find((a) => a.trait_type === 'Color')?.value
-                }`}
-              />
-            </Box>
+              position="absolute"
+              width="100%"
+              height="fit-content"
+              sx={{
+                px: { xs: '1rem', md: '8.625rem' },
+                top: {
+                  xxl: '-9vw',
+                  xl: '-11vw',
+                  lg: '-15vw',
+                  md: '-17vw',
+                  sm: '-24vw',
+                  xs: '-25vw'
+                }
+              }}>
+              <Box sx={{ m: 'auto', width: '100%' }}>
+                <img
+                  src={`https://ipfs.io/ipfs/${nft.image.slice(7)}`}
+                  alt="car"
+                  width="100%"
+                />
+              </Box>
+              <Box
+                display="flex"
+                flexWrap="wrap"
+                gap="3.5rem"
+                justifyContent="center">
+                <CardItem
+                  text={`MODEL: ${
+                    nft.attributes.find((a) => a.trait_type === 'Model')?.value
+                  }`}
+                />
+                <CardItem
+                  text={`TYPE: ${
+                    nft.attributes.find((a) => a.trait_type === 'Type')?.value
+                  }`}
+                />
+                <CardItem
+                  text={`COLOR: ${
+                    nft.attributes.find((a) => a.trait_type === 'Color')?.value
+                  }`}
+                />
+              </Box>
 
-            <Grid container mt="8rem" columnSpacing={9}>
-              <Grid item>
-                <Typography
-                  sx={{
-                    textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
-                    fontSize: '1.5rem',
-                    fontWeight: 600
-                  }}>
-                  Last sale
-                </Typography>
-                <Typography
-                  sx={{
-                    textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
-                    fontSize: '1.5rem',
-                    fontWeight: 600
-                  }}>
-                  Last Service
-                </Typography>
-                <Typography
-                  sx={{
-                    textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
-                    fontSize: '1.5rem',
-                    fontWeight: 600
-                  }}>
-                  Boost percentage
-                </Typography>
+              <Grid container mt="8rem" columnSpacing={9}>
+                <Grid item>
+                  <Typography
+                    sx={{
+                      textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
+                      fontSize: '1.5rem',
+                      fontWeight: 600
+                    }}>
+                    Last sale
+                  </Typography>
+                  <Typography
+                    sx={{
+                      textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
+                      fontSize: '1.5rem',
+                      fontWeight: 600
+                    }}>
+                    Last Service
+                  </Typography>
+                  <Typography
+                    sx={{
+                      textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
+                      fontSize: '1.5rem',
+                      fontWeight: 600
+                    }}>
+                    Boost percentage
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    sx={{
+                      textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
+                      fontSize: '1.5rem',
+                      fontWeight: 600
+                    }}>
+                    {
+                      nft.attributes.find((a) => a.trait_type === 'Last Sale')
+                        ?.value
+                    }
+                  </Typography>
+                  <Typography
+                    sx={{
+                      textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
+                      fontSize: '1.5rem',
+                      fontWeight: 600
+                    }}>
+                    {
+                      nft.attributes.find(
+                        (a) => a.trait_type === 'Last Service'
+                      )?.value
+                    }
+                  </Typography>
+                  <Typography
+                    sx={{
+                      textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
+                      fontSize: '1.5rem',
+                      fontWeight: 600
+                    }}>
+                    {
+                      nft.attributes.find((a) => a.trait_type === 'Discount')
+                        ?.value
+                    }
+                  </Typography>
+                </Grid>
               </Grid>
-              <Grid item>
-                <Typography
-                  sx={{
-                    textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
-                    fontSize: '1.5rem',
-                    fontWeight: 600
-                  }}>
-                  {
-                    nft.attributes.find((a) => a.trait_type === 'Last Sale')
-                      ?.value
-                  }
-                </Typography>
-                <Typography
-                  sx={{
-                    textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
-                    fontSize: '1.5rem',
-                    fontWeight: 600
-                  }}>
-                  {
-                    nft.attributes.find((a) => a.trait_type === 'Last Service')
-                      ?.value
-                  }
-                </Typography>
-                <Typography
-                  sx={{
-                    textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
-                    fontSize: '1.5rem',
-                    fontWeight: 600
-                  }}>
-                  {
-                    nft.attributes.find((a) => a.trait_type === 'Discount')
-                      ?.value
-                  }
-                </Typography>
-              </Grid>
-            </Grid>
 
-            <Box mt="13.25rem" pb="2rem">
-              <NftTabs nft={nft} />
+              <Box mt="13.25rem" pb="2rem">
+                <NftTabs nft={nft} />
+              </Box>
             </Box>
           </Box>
-        </Box>
+        </Container>
       </>
     );
   if (error)
