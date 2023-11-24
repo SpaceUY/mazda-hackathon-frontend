@@ -93,14 +93,14 @@ const NFTView = () => {
           <Background />
         </Box>
         <Container maxWidth="lg">
-          <Grid container mt="2rem">
-            <Grid item xs={12} md={6}>
+          <Grid container>
+            <Grid item xs={12} sm={6}>
               <Typography
                 sx={{
                   textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
                   fontWeight: 600,
                   letterSpacing: '2.5px',
-                  fontSize: { xs: '1.75rem', md: '3.125rem' }
+                  fontSize: { xs: '1.75rem', md: '2.125rem' }
                 }}>
                 {"JUAN'S CAR"}
               </Typography>
@@ -109,7 +109,7 @@ const NFTView = () => {
                   textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
                   fontWeight: 200,
                   letterSpacing: '1.7px',
-                  fontSize: { xs: '1.25rem', md: '2.1875rem' },
+                  fontSize: { xs: '1.25rem', md: '1.875rem' },
                   fontStyle: 'italic'
                 }}>
                 {nft.name}
@@ -119,21 +119,27 @@ const NFTView = () => {
                   textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
                   fontWeight: 200,
                   letterSpacing: '1.7px',
-                  fontSize: { xs: '1.25rem', md: '2.1875rem' },
+                  fontSize: { xs: '1.25rem', md: '1.875rem' },
                   fontStyle: 'italic'
                 }}>
                 {nft.vin}
               </Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              display="flex"
+              flexDirection="column"
+              alignItems="end">
               <Typography
                 sx={{
                   textShadow: '0 0.25rem 0.25rem rgba(0, 0, 0, 0.50)',
                   fontWeight: 600,
                   letterSpacing: '2.5px',
-                  fontSize: { xs: '2rem', md: '4.375rem' },
+                  fontSize: { xs: '2rem', md: '3.375rem' },
                   fontStyle: 'italic',
-                  marginTop: { xs: '2rem', md: '4rem' }
+                  marginTop: { xs: '2rem', md: '2rem' }
                 }}>
                 {nft.attributes.find((a) => a.trait_type === 'Mileage')?.value}{' '}
                 MILES
@@ -146,7 +152,7 @@ const NFTView = () => {
         </Container>
 
         <Container maxWidth="lg">
-          <Box m="auto" width="100%" position="relative" mt="15vw">
+          <Box m="auto" width="100%" position="relative" mt="10rem">
             <Box position="absolute" top={0} width="100%">
               <GlassBackground />
             </Box>
