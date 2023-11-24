@@ -166,7 +166,7 @@ export const HeroSection: React.FC = () => {
                 alignItems: 'center',
                 position: 'absolute',
                 top: { xs: '-3rem', md: '-15rem' },
-                left: { xs: '15.1rem', sm: '23rem', md: '43rem' },
+                left: { xs: '15.1rem', sm: '23rem', md: '30rem' },
                 transform: 'translateX(-50%)',
                 zIndex: 0
               }}>
