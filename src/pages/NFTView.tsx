@@ -83,7 +83,7 @@ const NFTView = () => {
   if (nft)
     return (
       <>
-        <Box position="absolute" top={0} zIndex={-1} width="100%">
+        <Box position="fixed" top={0} zIndex={-1} width="100%" height="100vh">
           <Background />
         </Box>
         <Container>
