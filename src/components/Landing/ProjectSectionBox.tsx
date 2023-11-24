@@ -9,24 +9,25 @@ export const ProjectSectionBox = () => {
         background: 'white',
         minHeight: '20rem'
       }}>
-      <Box sx={{ maxWidth: '100rem', margin: 'auto' }}>
+      <Box sx={{ maxWidth: '100rem', margin: 'auto', paddingBottom: '4rem' }}>
         <Grid
           container
-          spacing={{ xs: 8, sm: 6, md: 2 }}
+          columnSpacing={8}
+          rowSpacing={4}
           alignItems="center"
-          justifyContent="center">
+          justifyContent="center"
+          px={6}>
           <Grid
             item
             xs={12}
             sx={{
               textAlign: 'center',
-              paddingBottom: { xs: '5rem', sm: '2rem', md: '4rem' }
+              my: '1rem'
             }}>
             <Typography
               sx={{
                 color: '#000000',
                 maxWidth: '38rem',
-                maxHeight: '1rem',
                 fontFamily: 'Montserrat',
                 fontSize: '1.25rem',
                 fontWeight: '500',
@@ -38,12 +39,11 @@ export const ProjectSectionBox = () => {
             </Typography>
           </Grid>
           {/* First Box */}
-          <Grid item xs={5} sm={5} md={4} sx={{ marginBottom: '-10rem' }}>
+          <Grid item xs={12} sm={4} md={3} lg={2.5}>
             <Box
               sx={{
                 borderRadius: '0.625rem',
                 background: 'white',
-                maxWidth: '15rem',
                 minHeight: '20rem',
                 margin: 'auto',
                 textAlign: 'center',
@@ -79,12 +79,11 @@ export const ProjectSectionBox = () => {
             </Box>
           </Grid>
           {/* Second Box */}
-          <Grid item xs={5} sm={5} md={4} sx={{ marginBottom: '-10rem' }}>
+          <Grid item xs={12} sm={4} md={3} lg={2.5}>
             <Box
               sx={{
                 borderRadius: '0.625rem',
                 background: 'white',
-                maxWidth: '15rem',
                 minHeight: '20rem',
                 margin: 'auto',
                 textAlign: 'center',
@@ -120,12 +119,11 @@ export const ProjectSectionBox = () => {
             </Box>
           </Grid>
           {/* Third Box */}
-          <Grid item xs={5} sm={5} md={4} sx={{ marginBottom: '-10rem' }}>
+          <Grid item xs={12} sm={4} md={3} lg={2.5}>
             <Box
               sx={{
                 borderRadius: '0.625rem',
                 background: 'white',
-                maxWidth: '15rem',
                 minHeight: '20rem',
                 margin: 'auto',
                 textAlign: 'center',

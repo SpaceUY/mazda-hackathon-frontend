@@ -18,7 +18,7 @@ export const ProjectSection: React.FC = () => {
         <Typography
           variant="h1"
           sx={{
-            margin: '2rem',
+            margin: '1rem',
             textAlign: 'center',
             fontFamily: 'Montserrat',
             fontSize: '2.8rem',
@@ -28,7 +28,7 @@ export const ProjectSection: React.FC = () => {
           THE PROJECT
         </Typography>
       </Box>
-      <Box sx={{ margin: 'auto', paddingTop: '0.5rem' }}>
+      <Box sx={{ margin: 'auto' }}>
         <ProjectSectionBox />
       </Box>
       <Box
