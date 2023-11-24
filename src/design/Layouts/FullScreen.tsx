@@ -83,7 +83,7 @@ const FullScreen = ({
                   color: '#A3A3A3',
                   backdropFilter: 'blur(.5rem)'
                 }}>
-                CAR NFT
+                MY CAR
               </Button>
             </Box>
           </Box>

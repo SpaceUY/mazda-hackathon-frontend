@@ -76,9 +76,7 @@ export const ProjectSectionDescription: React.FC = () => {
                 fontWeight: 500,
                 lineHeight: '2.5rem'
               }}>
-              A seamless car ownership journey, by incorporating real-time
-              maintenance alerts, interactive experiences, and eco-friendly
-              practices, all underpinned by web3s secure framework.
+              texto de la slide 9
               <Box
                 sx={{
                   alignSelf: 'flex-end',

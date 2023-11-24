@@ -8,9 +8,9 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 export const Footer: React.FC = () => {
   const navigate = useNavigate();
 
-  const onCarNFTClick = () => {
-    navigate('/nft-view/0x851359e4ee55918ef69A87078C9f1Bd8d85421d2/0');
-  };
+  // const onCarNFTClick = () => {
+  //   navigate('/nft-view/0x851359e4ee55918ef69A87078C9f1Bd8d85421d2/0');
+  // };
 
   return (
     <Box
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
                 fontWeight: 700,
                 lineHeight: '1.25rem'
               }}>
-              LOG IN
+              Project submission (arreglar)
             </Button>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
             </Box>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Button
+            {/* <Button
               color="inherit"
               onClick={onCarNFTClick}
               sx={{
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
                 lineHeight: '1.25rem'
               }}>
               CAR NFT
-            </Button>
+            </Button> */}
           </Grid>
         </Grid>
       </Box>
@@ -154,7 +154,9 @@ export const Footer: React.FC = () => {
                 lineHeight: '1.25rem',
                 textAlign: 'center'
               }}>
-              Privacy & Terms
+              Project developed for the Web3 Global...
+              (https://key3.eventos.tokyo/web/portal/744/event/7845), not for
+              commercial use
             </Typography>
           </Grid>
         </Grid>

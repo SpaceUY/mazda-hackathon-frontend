@@ -34,8 +34,7 @@ export const ProjectSectionBox = () => {
                 lineHeight: '2.5rem',
                 margin: 'auto'
               }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              ultricies lectus eros, convallis scelerisque lacus
+              Our goal....
             </Typography>
           </Grid>
           {/* First Box */}

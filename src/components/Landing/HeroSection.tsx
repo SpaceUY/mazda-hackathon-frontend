@@ -123,7 +123,7 @@ export const HeroSection: React.FC = () => {
                   letterSpacing: '0.225rem',
                   flexShrink: 0
                 }}>
-                Cumque pertinacius ut legum gnarus.
+                Designed to synergyze with....(pagina 2)
               </Typography>
               <Typography
                 sx={{
@@ -137,8 +137,7 @@ export const HeroSection: React.FC = () => {
                   letterSpacing: '0.225rem',
                   lineHeight: { xs: '1.5rem', smd: '2rem', md: '2.5rem' }
                 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ultricies lectus eros, convallis scelerisque lacus.
+                Our platform enhances every aspect
               </Typography>
             </Box>
           </Box>

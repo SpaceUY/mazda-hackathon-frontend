@@ -102,7 +102,7 @@ const NFTView = () => {
                   letterSpacing: '2.5px',
                   fontSize: { xs: '1.75rem', md: '2.125rem' }
                 }}>
-                {"JUAN'S CAR"}
+                {"JUAN'S CAR"} Link al contrato
               </Typography>
               <Typography
                 sx={{

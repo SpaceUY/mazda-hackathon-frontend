@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
                 fontWeight: 700,
                 lineHeight: '1.25rem'
               }}>
-              LOG IN
+                Project submission (arreglar)
             </Button>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
             </Box>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Button
+            {/* <Button
               color="inherit"
               onClick={onCarNFTClick}
               sx={{
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
                 lineHeight: '1.25rem'
               }}>
               CAR NFT
-            </Button>
+            </Button> */}
           </Grid>
         </Grid>
       </Box>
