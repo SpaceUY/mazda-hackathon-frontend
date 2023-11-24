@@ -72,7 +72,7 @@ export const Web3authContextProvider = ({
             blockExplorer: 'https://shibuya.subscan.io/',
             displayName: 'Shibuya'
           },
-          web3AuthNetwork: OPENLOGIN_NETWORK.SAPPHIRE_MAINNET
+          web3AuthNetwork: OPENLOGIN_NETWORK.SAPPHIRE_DEVNET
         });
 
         const openloginAdapter = new OpenloginAdapter({
