@@ -5,13 +5,15 @@ import axios from 'axios';
 import nftMazdaABI from 'contracts/abi';
 import useWeb3auth from 'hooks/useWeb3auth';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
+import LaunchIcon from '@mui/icons-material/Launch';
 import {
   Box,
   CircularProgress,
   Container,
   Grid,
+  IconButton,
   Typography
 } from '@mui/material';
 
@@ -54,6 +56,7 @@ export type Service = {
 const NFTView = () => {
   const params = useParams();
   const web3 = useWeb3auth();
+  const navigate = useNavigate();
 
   const [nft, setNft] = useState<NFT | undefined>(undefined);
   const [error, setError] = useState(false);
@@ -102,7 +105,15 @@ const NFTView = () => {
                   letterSpacing: '2.5px',
                   fontSize: { xs: '1.75rem', md: '2.125rem' }
                 }}>
-                {"JUAN'S CAR"} Link al contrato
+                {"JUAN'S CAR"}{' '}
+                <IconButton
+                  onClick={() =>
+                    navigate(
+                      'https://blockscout.com/shibuya/tx/0x79e98f9c7dccff1b363bb72c4f35879d9c95205ee8ec610a25a66ea5df4ae119'
+                    )
+                  }>
+                  <LaunchIcon />
+                </IconButton>
               </Typography>
               <Typography
                 sx={{

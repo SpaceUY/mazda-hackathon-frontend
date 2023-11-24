@@ -1,9 +1,8 @@
-import ellipse from 'assets/images/Ellipse.png';
 import logo from 'assets/images/logo-space.png';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Link, Typography } from '@mui/material';
 
 export const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -16,8 +15,8 @@ export const Footer: React.FC = () => {
     <Box
       sx={{
         minWidth: '100%',
-        minHeight: '25rem',
-        background: '#000000'
+        background: '#000000',
+        paddingBottom: '2rem'
       }}>
       <Box
         sx={{ width: '85%', margin: 'auto', borderBottom: '1px solid white' }}>
@@ -37,7 +36,7 @@ export const Footer: React.FC = () => {
                 fontWeight: 700,
                 lineHeight: '1.25rem'
               }}>
-              Project submission (arreglar)
+              Project submission (arreglar) 2
             </Button>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -53,9 +52,11 @@ export const Footer: React.FC = () => {
             </Box>
           </Grid>
           <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-            {/* <Button
+            <Link
+              href="https://www.notion.so/dm-collective/Mazda-web3-Global-Hackathon-3ace51473b4049939a602da6bcb90817?pvs=4"
               color="inherit"
-              onClick={onCarNFTClick}
+              rel="noreferrer"
+              target="_blank"
               sx={{
                 fontFamily: 'Roboto',
                 fontSize: '0.875rem',
@@ -63,12 +64,12 @@ export const Footer: React.FC = () => {
                 fontWeight: 700,
                 lineHeight: '1.25rem'
               }}>
-              CAR NFT
-            </Button> */}
+              Notion
+            </Link>
           </Grid>
         </Grid>
       </Box>
-      <Box
+      {/* <Box
         sx={{
           maxWidth: { xs: '60%', sm: '40%' },
           margin: 'auto',
@@ -119,8 +120,8 @@ export const Footer: React.FC = () => {
             <img src={ellipse} alt="project logo" />
           </Grid>
         </Grid>
-      </Box>
-      <Box sx={{ maxWidth: '30%', margin: 'auto', marginTop: '1.5rem' }}>
+      </Box> */}
+      <Box sx={{ margin: 'auto', marginTop: '1.5rem' }}>
         <Grid
           container
           spacing={1}
