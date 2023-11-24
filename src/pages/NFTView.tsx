@@ -140,7 +140,7 @@ const NFTView = () => {
         </Container>
 
         <Box m="auto" width="90%" position="relative" mt="15vw">
-          <Box position="absolute" top={0} width="100%" maxHeight={'10rem'}>
+          <Box position="absolute" top={0} width="100%">
             <GlassBackground />
           </Box>
           <Box

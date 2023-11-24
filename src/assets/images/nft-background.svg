@@ -1,11 +1,11 @@
 <svg viewBox="0 0 1440 2481" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect width="1440" height="2481" fill="url(#paint0_linear_70_525)"/>
+<rect width="1440" height="100%" fill="url(#paint0_linear_70_525)"/>
 <g opacity="0.35" filter="url(#filter0_f_70_525)">
 <ellipse cx="349.5" cy="44" rx="526.5" ry="410" fill="#FF8A00" fill-opacity="0.45"/>
 </g>
 <g opacity="0.6">
 <g opacity="0.2" filter="url(#filter1_if_70_525)">
-<rect width="1601" height="1066" transform="matrix(-1 0 0 1 1635 107)" fill="url(#pattern0)"/>
+<rect width="1601" height="50%" transform="matrix(-1 0 0 1 1635 107)" fill="url(#pattern0)"/>
 </g>
 </g>
 <defs>
