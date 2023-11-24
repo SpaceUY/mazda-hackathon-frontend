@@ -76,7 +76,9 @@ export const ProjectSectionDescription: React.FC = () => {
                 fontWeight: 500,
                 lineHeight: '2.5rem'
               }}>
-              texto de la slide 9
+              From dealership efficiency to owner enjoyment, MYCARID promises an
+              ecosystem of benefits, fostering a community around innovative car
+              care.
               <Box
                 sx={{
                   alignSelf: 'flex-end',

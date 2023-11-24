@@ -34,7 +34,21 @@ export const ProjectSectionBox = () => {
                 lineHeight: '2.5rem',
                 margin: 'auto'
               }}>
-              Our goal....
+              Our goal is to craft a seamless car ownership journey by
+              incorporating real-time maintenance alerts, interactive
+              experiences, and eco-friendly practices.
+            </Typography>
+            <Typography
+              sx={{
+                color: '#FF7F00',
+                maxWidth: '48rem',
+                fontFamily: 'Montserrat',
+                fontSize: '1.5rem',
+                fontWeight: '900',
+                lineHeight: '2.4rem',
+                margin: 'auto'
+              }}>
+              ALL UNDERPINNED BY WEB3s SECURE FRAMEWORK
             </Typography>
           </Grid>
           {/* First Box */}
@@ -60,20 +74,7 @@ export const ProjectSectionBox = () => {
                   fontSize: '1.125rem',
                   fontWeight: '700'
                 }}>
-                LOREM IMPSUM
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: '80%',
-                  marginTop: '1.5rem',
-                  color: '#000000',
-                  fontFamily: 'Montserrat',
-                  fontSize: '0.85rem',
-                  fontWeight: '500',
-                  lineHeight: '1.4rem'
-                }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ultricies lectus.
+                Transform car ownership into a joyous experience.
               </Typography>
             </Box>
           </Grid>
@@ -100,20 +101,7 @@ export const ProjectSectionBox = () => {
                   fontSize: '1.125rem',
                   fontWeight: '700'
                 }}>
-                LOREM IMPSUM
-              </Typography>
-              <Typography
-                sx={{
-                  maxWidth: '80%',
-                  marginTop: '1.5rem',
-                  color: '#000000',
-                  fontFamily: 'Montserrat',
-                  fontSize: '0.85rem',
-                  fontWeight: '500',
-                  lineHeight: '1.4rem'
-                }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ultricies lectus.
+                Integrate predictive maintenance alerts to avert costly repairs
               </Typography>
             </Box>
           </Grid>
@@ -140,20 +128,35 @@ export const ProjectSectionBox = () => {
                   fontSize: '1.125rem',
                   fontWeight: '700'
                 }}>
-                LOREM IMPSUM
+                Embed a reward mechanism for proactive maintenance and enjoyable
+                driving.
               </Typography>
+            </Box>
+          </Grid>
+          {/* Forth Box */}
+          <Grid item xs={12} sm={4} md={3} lg={2.5}>
+            <Box
+              sx={{
+                borderRadius: '0.625rem',
+                background: 'white',
+                minHeight: '20rem',
+                margin: 'auto',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                boxShadow: '0px 5px 20px 0px rgba(0, 0, 0, 0.4)'
+              }}>
               <Typography
                 sx={{
                   maxWidth: '80%',
-                  marginTop: '1.5rem',
                   color: '#000000',
                   fontFamily: 'Montserrat',
-                  fontSize: '0.85rem',
-                  fontWeight: '500',
-                  lineHeight: '1.4rem'
+                  fontSize: '1.125rem',
+                  fontWeight: '700'
                 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ultricies lectus.
+                Promote a communal, safe, and green driving culture.
               </Typography>
             </Box>
           </Grid>

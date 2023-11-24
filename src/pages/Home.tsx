@@ -54,7 +54,6 @@ const Home = () => {
           </Typography>
         </Typography>
       </Box>
-
       <Footer />
     </Container>
   );
