@@ -157,14 +157,18 @@ const NFTView = () => {
               sx={{
                 px: { xs: '1rem', md: '8.625rem' },
                 top: {
-                  xl: '-13vw',
-                  lg: '-17vw',
+                  xl: '-11vw',
+                  lg: '-14vw',
                   md: '-19vw',
                   sm: '-26vw',
                   xs: '-27vw'
                 }
               }}>
-              <Box sx={{ m: 'auto', width: '100%' }}>
+              <Box
+                sx={{
+                  m: 'auto',
+                  width: { xs: '100%', sm: '80%', md: '75%', lg: '70%' }
+                }}>
                 <img
                   src={`https://ipfs.io/ipfs/${nft.image.slice(7)}`}
                   alt="car"
