@@ -83,7 +83,13 @@ const NFTView = () => {
   if (nft)
     return (
       <>
-        <Box position="fixed" top={0} zIndex={-1} width="100%" height="100vh">
+        <Box
+          position="fixed"
+          top={0}
+          zIndex={-1}
+          width="100%"
+          height="100vh"
+          bgcolor="black">
           <Background />
         </Box>
         <Container>
@@ -147,7 +153,7 @@ const NFTView = () => {
             position="absolute"
             top={'-20vw'}
             width="100%"
-            sx={{ px: { xs: 0, md: '8.625rem' } }}>
+            sx={{ px: { xs: '1rem', md: '8.625rem' }, pb: '80rem' }}>
             <Box sx={{ m: 'auto', width: '100%' }}>
               <img
                 src={`https://ipfs.io/ipfs/${nft.image.slice(7)}`}
