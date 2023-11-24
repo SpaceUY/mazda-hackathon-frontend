@@ -92,7 +92,7 @@ const NFTView = () => {
           bgcolor="black">
           <Background />
         </Box>
-        <Container>
+        <Container maxWidth="lg">
           <Grid container mt="2rem">
             <Grid item xs={12} md={6}>
               <Typography
@@ -145,7 +145,7 @@ const NFTView = () => {
           </Grid>
         </Container>
 
-        <Container>
+        <Container maxWidth="lg">
           <Box m="auto" width="100%" position="relative" mt="15vw">
             <Box position="absolute" top={0} width="100%">
               <GlassBackground />
@@ -193,7 +193,7 @@ const NFTView = () => {
                 />
               </Box>
 
-              <Grid container mt="8rem" columnSpacing={9}>
+              <Grid container mt="12rem" columnSpacing={9}>
                 <Grid item>
                   <Typography
                     sx={{
@@ -253,12 +253,13 @@ const NFTView = () => {
                     {
                       nft.attributes.find((a) => a.trait_type === 'Discount')
                         ?.value
-                    }
+                    }{' '}
+                    %
                   </Typography>
                 </Grid>
               </Grid>
 
-              <Box mt="13.25rem" pb="2rem">
+              <Box mt="12rem" pb="2rem">
                 <NftTabs nft={nft} />
               </Box>
             </Box>
