@@ -153,7 +153,8 @@ const NFTView = () => {
             position="absolute"
             top={'-20vw'}
             width="100%"
-            sx={{ px: { xs: '1rem', md: '8.625rem' }, pb: '80rem' }}>
+            height="fit-content"
+            sx={{ px: { xs: '1rem', md: '8.625rem' } }}>
             <Box sx={{ m: 'auto', width: '100%' }}>
               <img
                 src={`https://ipfs.io/ipfs/${nft.image.slice(7)}`}
@@ -247,7 +248,7 @@ const NFTView = () => {
               </Grid>
             </Grid>
 
-            <Box mt="13.25rem" mb="2rem">
+            <Box mt="13.25rem" pb="2rem">
               <NftTabs nft={nft} />
             </Box>
           </Box>
