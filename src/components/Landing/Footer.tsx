@@ -179,6 +179,7 @@ export const Footer: React.FC = () => {
                 fontWeight: '400',
                 lineHeight: '1.25rem',
                 textAlign: 'center',
+                maxWidth: { xs: '96%', sm: 'auto' },
                 '& a': {
                   color: 'inherit',
                   textDecoration: 'none',
@@ -186,7 +187,8 @@ export const Footer: React.FC = () => {
                     textDecoration: 'underline'
                   }
                 }
-              }}>
+              }}
+              textAlign="center">
               <a href="https://key3.eventos.tokyo/web/portal/744/event/7845">
                 Project developed for the Web3 Global, not for commercial use
               </a>
