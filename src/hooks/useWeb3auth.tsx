@@ -71,7 +71,9 @@ export const Web3authContextProvider = ({
             chainId: '0x51',
             rpcTarget: 'https://evm.shibuya.astar.network', // This is the public RPC we have added, please pass on your own endpoint while creating an app
             blockExplorer: 'https://shibuya.subscan.io',
-            displayName: 'Shibuya'
+            displayName: 'Shibuya',
+            ticker: 'SBY',
+            tickerName: 'Shibuya'
           },
           // chainConfig: {
           //   chainNamespace: CHAIN_NAMESPACES.EIP155,
@@ -172,7 +174,9 @@ export const Web3authContextProvider = ({
             chainId: '0x51',
             rpcTarget: 'https://evm.shibuya.astar.network', // This is the public RPC we have added, please pass on your own endpoint while creating an app
             blockExplorer: 'https://shibuya.subscan.io',
-            displayName: 'Shibuya'
+            displayName: 'Shibuya',
+            ticker: 'SBY',
+            tickerName: 'Shibuya'
           }
         });
         // we can change the above settings using this function
@@ -188,7 +192,9 @@ export const Web3authContextProvider = ({
             chainId: '0x51',
             rpcTarget: 'https://evm.shibuya.astar.network', // This is the public RPC we have added, please pass on your own endpoint while creating an app
             blockExplorer: 'https://shibuya.subscan.io',
-            displayName: 'Shibuya'
+            displayName: 'Shibuya',
+            ticker: 'SBY',
+            tickerName: 'Shibuya'
           },
           web3AuthNetwork: 'cyan'
         });
