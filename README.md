@@ -1,4 +1,4 @@
-![image](https://github.com/SpaceUY/mazda-hackathon-frontend/assets/122282980/baff9c65-1f28-414b-bcaa-85e8b2d8f7fc)# Introducing MyCarId:
+# Introducing MyCarId:
 
 A web3 vehicle platform that redefines the driving experience with blockchain-enabled rewards and maintenance alerts tailored to Mazda's ethos of joy and innovation in every journey.
 
