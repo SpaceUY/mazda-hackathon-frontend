@@ -128,7 +128,10 @@ export const Web3authContextProvider = ({
           torusWalletOpts: {},
           walletInitOptions: {
             whiteLabel: {
-              theme: { isDark: true, colors: { primary: '#00a8ff' } },
+              theme: {
+                isDark: true,
+                colors: { torusBrand1: '#CC6600' }
+              },
               logoDark: 'https://www.svgrepo.com/show/9452/wallet.svg',
               logoLight: 'https://www.svgrepo.com/show/9452/wallet.svg'
             },
