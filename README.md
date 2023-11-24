@@ -1,3 +1,7 @@
+# Introducing MyCarId:
+
+A web3 vehicle platform that redefines the driving experience with blockchain-enabled rewards and maintenance alerts tailored to Mazda's ethos of joy and innovation in every journey.
+
 # Installation
 
 ### Install the dependencies
